@@ -1,2 +1,3 @@
-# Template repo  
-A template repo with prettier, webpack, npm and stuff. Made to be used in my personal projects
+# Weather app
+
+A simple weather site that uses an api from [visual crossing](https://www.visualcrossing.com/weather-api) to retrieve weather information of a specified city and display it.
