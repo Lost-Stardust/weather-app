@@ -9,8 +9,8 @@ async function getWeather(loc) {
   return data;
 }
 // Make a function that filters through the data from the response and makes an object of data that you want the app to display.
-async function getData() {
-  const data = await getWeather("tokyo");
+async function getData(loc) {
+  const data = await getWeather(loc);
   const dataObj = {};
   // data > currentConditions > [conditions, icon, temp, feelslike, uvindex]
   dataObj.currentConditions = {
@@ -26,3 +26,6 @@ async function getData() {
   console.log(dataObj);
   return dataObj;
 }
+
+const city = document.querySelector("#search");
+console.log(city);
