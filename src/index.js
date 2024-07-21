@@ -8,3 +8,21 @@ async function getWeather(loc) {
   console.log(data);
   return data;
 }
+// Make a function that filters through the data from the response and makes an object of data that you want the app to display.
+async function getData() {
+  const data = await getWeather("tokyo");
+  const dataObj = {};
+  // data > currentConditions > [conditions, icon, temp, feelslike, uvindex]
+  dataObj.currentConditions = {
+    conditions: data.currentConditions.conditions,
+    icon: data.currentConditions.icon,
+    temp: data.currentConditions.temp,
+    feelslike: data.currentConditions.feelslike,
+    uvindex: data.currentConditions.uvindex,
+  };
+  // data > days > [15], take maybe 7 for a weekly simple weather overview on the side? show perhaps icons, temp, conditions/description.
+  dataObj.days = data.days;
+
+  console.log(dataObj);
+  return dataObj;
+}
