@@ -45,3 +45,54 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+.cont {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+h1 {
+  grid-column: 1/3;
+  font-size: 40px;
+}
+form {
+  grid-row: 1;
+  grid-column: 5;
+}
+.sun {
+  border: solid black 2px;
+  height: 180px;
+  width: 400px;
+  grid-row: 2/4;
+  grid-column: 1/3;
+}
+.curr {
+  height: 180px;
+  width: 890px;
+  border: solid black 2px;
+  grid-row: 2/4;
+  grid-column: 3 / 7;
+}
+.week {
+  border: solid black 2px;
+  height: 300px;
+  width: 98%;
+  grid-row: 4/-1;
+  grid-column: 1/-1;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 40px;
+}
+.week > div {
+  border: solid goldenrod 2px;
+  height: 100px;
+  width: 400px;
+}
