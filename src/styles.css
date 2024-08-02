@@ -62,7 +62,8 @@ h1 {
 }
 form {
   grid-row: 1;
-  grid-column: 5;
+  grid-column: 4/6;
+  display: flex;
 }
 .sun {
   border: solid black 2px;
@@ -95,4 +96,8 @@ form {
   border: solid goldenrod 2px;
   height: 100px;
   width: 400px;
+}
+img {
+  height: 20px;
+  width: 20px;
 }
