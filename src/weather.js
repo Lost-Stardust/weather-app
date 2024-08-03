@@ -8,7 +8,7 @@ const getWeatherData = async () => {
     console.log(data.days[0].icon);
     return data;
   }
-  await getWeather("london");
+  return getWeather("london");
   // Make a function that filters through the data from the response and makes an object of data that you want the app to display.
   async function getData(loc) {
     const data = await getWeather(loc);
