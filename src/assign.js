@@ -1,0 +1,2 @@
+const assignData = () => {};
+export { assignData };
