@@ -5,7 +5,6 @@ const getWeatherData = async () => {
     );
     const data = await response.json();
     console.log(data);
-    console.log(data.days[0].icon);
     return data;
   }
   return getWeather("london");
