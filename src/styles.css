@@ -136,4 +136,9 @@ button {
 .temp-box {
   height: 100%;
   flex: 0.5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
