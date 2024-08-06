@@ -1,9 +1,61 @@
-import icon from "./assets/magnify.svg";
 import { getWeatherData } from "./weather";
+// import all icons
+import clearday from "./assets/clear-day.png";
+import clearnight from "./assets/clear-night.png";
+import cloudy from "./assets/cloudy.png";
+import fog from "./assets/fog.png";
+import hail from "./assets/hail.png";
+import partlycloudyday from "./assets/partly-cloudy-day.png";
+import partlycloudynight from "./assets/partly-cloudy-night.png";
+import rainsnowshowersday from "./assets/rain-snow-showers-day.png";
+import rainsnowshowersnight from "./assets/rain-snow-showers-night.png";
+import rainsnow from "./assets/rain-snow.png";
+import rain from "./assets/rain.png";
+import showersday from "./assets/showers-day.png";
+import showersnight from "./assets/showers-night.png";
+import sleet from "./assets/sleet.png";
+import snowshowersday from "./assets/snow-showers-day.png";
+import snowshowersnight from "./assets/snow-showers-night.png";
+import snow from "./assets/snow.png";
+import thunderrain from "./assets/thunder-rain.png";
+import thundershowersday from "./assets/thunder-showers-day.png";
+import thundershowersnight from "./assets/thunder-showers-night.png";
+import thunder from "./assets/thunder.png";
+import wind from "./assets/wind.png";
+
+const icons = {
+  clearday,
+  clearnight,
+  cloudy,
+  fog,
+  hail,
+  partlycloudyday,
+  partlycloudynight,
+  rainsnowshowersday,
+  rainsnowshowersnight,
+  rainsnow,
+  rain,
+  showersday,
+  showersnight,
+  sleet,
+  snowshowersday,
+  snowshowersnight,
+  snow,
+  thunderrain,
+  thundershowersday,
+  thundershowersnight,
+  thunder,
+  wind,
+};
+
 const data = await getWeatherData();
-console.log(data);
+
+let currIcon = data.days[0].icon;
+currIcon = currIcon.replace(/-/g, "");
+console.log(currIcon);
+
 const assignIcons = () => {
-  const search = document.querySelector(".search");
-  search.src = icon;
+  const currImg = document.querySelector(".icon");
+  currImg.src = icons[currIcon];
 };
 export { assignIcons };
