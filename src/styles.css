@@ -121,6 +121,9 @@ button {
   align-items: center;
   justify-content: center;
 }
+.curr-icon {
+  height: 50%;
+}
 .curr > p {
   height: 50%;
   flex: 1.5;
