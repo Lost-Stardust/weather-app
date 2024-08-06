@@ -55,7 +55,7 @@ currIcon = currIcon.replace(/-/g, "");
 console.log(currIcon);
 
 const assignIcons = () => {
-  const currImg = document.querySelector(".icon");
+  const currImg = document.querySelector(".curr-icon");
   currImg.src = icons[currIcon];
 };
 export { assignIcons };
