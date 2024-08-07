@@ -57,5 +57,13 @@ console.log(currIcon);
 const assignIcons = () => {
   const currImg = document.querySelector(".curr-icon");
   currImg.src = icons[currIcon];
+
+  const weekDays = document.querySelectorAll(".weekday");
+  let dayCount = 0;
+  for (let i = 0; i < weekDays.length; i++) {
+    ++dayCount;
+    weekDays[i].children[0].firstChild.src =
+      icons[data.days[dayCount].icon.replace(/-/g, "")];
+  }
 };
 export { assignIcons };
