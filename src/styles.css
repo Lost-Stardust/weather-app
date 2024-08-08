@@ -161,3 +161,17 @@ button {
 .weekday > div > img {
   width: 40%;
 }
+.sun,
+.sun > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sun > div {
+  flex: 1;
+  flex-direction: column;
+}
+.sunrise > img,
+.sunset > img {
+  width: 40%;
+}
