@@ -67,6 +67,7 @@ h1 {
   font-family: "Permanent Marker", cursive;
   font-weight: 400;
   font-style: normal;
+  text-shadow: -3px 3px 0px rgba(211, 63, 73, 1);
 }
 form {
   grid-row: 1;
