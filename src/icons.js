@@ -50,11 +50,10 @@ const icons = {
 
 const data = await getWeatherData();
 
-let currIcon = data.days[0].icon;
-currIcon = currIcon.replace(/-/g, "");
-console.log(currIcon);
-
-const assignIcons = () => {
+const assignIcons = (data) => {
+  let currIcon = data.days[0].icon;
+  currIcon = currIcon.replace(/-/g, "");
+  console.log(currIcon);
   const currImg = document.querySelector(".curr-icon");
   currImg.src = icons[currIcon];
 
