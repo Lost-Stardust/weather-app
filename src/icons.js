@@ -1,4 +1,3 @@
-import { getWeatherData } from "./weather";
 // import all icons
 import clearday from "./assets/clear-day.png";
 import clearnight from "./assets/clear-night.png";
@@ -47,8 +46,6 @@ const icons = {
   thunder,
   wind,
 };
-
-const data = await getWeatherData();
 
 const assignIcons = (data) => {
   let currIcon = data.days[0].icon;
