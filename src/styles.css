@@ -211,6 +211,12 @@ button {
 #search:focus {
   outline: none;
 }
+#search:focus:valid {
+  border-bottom: solid 2px rgb(37, 202, 37);
+}
+#search:focus:invalid {
+  border-bottom: solid 2px rgb(214, 40, 40);
+}
 #search::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
