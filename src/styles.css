@@ -238,9 +238,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
-  box-shadow:
-    rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   background-color: #403f4c;
   border-radius: 50%;
   z-index: 10;
@@ -252,7 +249,15 @@ body {
   justify-content: center;
 }
 .loading.active {
-  transform: translate(-50%, -50%) scale(1);
+  animation: loading 2s linear infinite;
+}
+@keyframes loading {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(-360deg);
+  }
 }
 .overlay {
   position: fixed;
