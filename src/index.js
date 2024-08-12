@@ -14,11 +14,17 @@ submit.addEventListener("click", async (event) => {
   event.preventDefault();
   loading(true);
   // Run imported function that shows a loading icon
-  const data = await getWeatherData(searchBar.value);
+  const data = await getWeatherData(searchBar.value).catch((err) => {
+    alert("Location not found, please enter a valid city");
+  });
   console.log(data);
   // Run again to remove loading icon
-  loading(false);
-  assignData(await data);
-  assignIcons(await data);
+  if (data) {
+    loading(false);
+    assignData(await data);
+    assignIcons(await data);
+  } else {
+    loading(false);
+  }
 });
 // Maybe you can put function calls inside a async function here that could await the result of weather data/display of weather data and then while awaiting for that, it could display a loading icon.
